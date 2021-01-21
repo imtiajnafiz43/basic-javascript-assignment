@@ -58,13 +58,19 @@ function hotelCost(daysSpend) {
 
 // task-4:megaFriend
 function megaFriend(friendsName) {
-    var max = friendsName[0].length;
-    var megaFriendName = friendsName[0];
-    for (var i = 1; i < friendsName.length; i++) {
-        if (max < friendsName[i].length) {
-            max = friendsName[i].length;
-            megaFriendName = friendsName[i];
-        }
+    //check string empty or not 
+    if (friendsName.length == 0 || friendsName == '' || friendsName == "") {
+        return "string can't be empty";
     }
-    return megaFriendName;
+    else {
+        var max = friendsName[0].length;
+        var megaFriendName = friendsName[0];
+        for (var i = 1; i < friendsName.length; i++) {
+            if (max < friendsName[i].length) {
+                max = friendsName[i].length;
+                megaFriendName = friendsName[i];
+            }
+        }
+        return megaFriendName;
+    }
 }
